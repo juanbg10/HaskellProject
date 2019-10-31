@@ -39,6 +39,7 @@ getHomeR = do
             <h2>Olá mundo
             <img src=@{StaticR pikachu_png>
         |]
+        
 getPage1R :: Handler Html
 getPage1R = do
     defaultLayout $ do addScript (StaticR ola_js)
@@ -46,7 +47,7 @@ getPage1R = do
             <h1>
                 Pag1
             
-            <a href={Page1R}>
+            <a href={HomeR}>
                 Voltar
             
             |]

@@ -30,4 +30,5 @@ getHomeR = do
         [whamlet|
             <h1>Hello World
             <h2>Olá mundo
+            <img src=@{StaticR pikachu_png>
         |]

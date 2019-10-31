@@ -8,6 +8,9 @@ module Handler.Home where
 
 import Import
 import Data.FileEmbed (embedFile)
+import Text.Lucius
+import Text.Julius
+
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 
@@ -51,3 +54,11 @@ getPage1R = do
                 Voltar
             
             |]
+            
+            
+getPage2R :: Handler Html
+getPage2R = do
+    defaultLayout $ do 
+        $(whamletFile "templates/page2.hamlet")
+        toWidgetHead$(luciusFile "templates/page2.lucius")
+        toWidgetHead$(juliusFile "templates/page2.julius")

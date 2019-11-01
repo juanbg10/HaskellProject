@@ -1,4 +1,4 @@
-git add . &
+git add . &&
 git commit -m "$1" &&
 git push origin master &&
 ssh root@164.132.228.201 <<EOF

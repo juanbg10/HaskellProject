@@ -41,6 +41,16 @@ getHomeR = do
             <h1>Hello World!!
             <h2>Olá mundo
             <img src=@{StaticR pikachu_png>
+            <ul>
+                <li>
+                    <a href =@{Page1R}>
+                        PAGINA 1
+                <li>
+                    <a href =@{Page2R}>
+                        PAGINA 2
+                <li>
+                    <a href =@{Page3R}>
+                        PAGINA 3
         |]
         
 getPage1R :: Handler Html

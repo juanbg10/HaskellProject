@@ -34,6 +34,7 @@ getHomeR = do
         toWidgetHead[lucius|
             h1{
                 color:red;
+                background-color: green;
             }
         |]
         

@@ -58,13 +58,13 @@ getPage1R :: Handler Html
 getPage1R = do
     defaultLayout $ do addScript (StaticR ola_js)
         [whamlet|
-            <h1>
-                Pag1
-            
-            <a href={HomeR}>
-                Voltar
-            
-            |]
+                    <h1>
+                        Pag1
+                    
+                    <a href={HomeR}>
+                        Voltar
+                    
+                    |]
             
             
 getPage2R :: Handler Html

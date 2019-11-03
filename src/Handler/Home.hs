@@ -64,7 +64,7 @@ getPage1R = do
                     <a href={HomeR}>
                         Voltar
                     
-                    |]
+                 |]
             
             
 getPage2R :: Handler Html

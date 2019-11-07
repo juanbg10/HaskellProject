@@ -5,7 +5,7 @@
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
 module Handler.Home where
-
+    
 import Import
 import Data.FileEmbed (embedFile)
 import Text.Lucius

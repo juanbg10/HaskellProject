@@ -1,7 +1,7 @@
 git add . &&
 git commit -m "$1" &&
 git push origin master &&
-ssh root@164.132.228.201 <<EOF
+ssh root@164.132.228.201 << EOF
 cd HaskellProject &&
 git pull origin master &&
 stack build &&

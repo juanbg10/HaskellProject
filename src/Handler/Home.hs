@@ -26,7 +26,7 @@ getHomeR = do
             [whamlet|
                     <body>
                         <h1>Hello World!!
-                        <h2>Olá mundo
+                        <h2>Olá mundo!!
 
                     |]
         

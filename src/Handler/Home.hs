@@ -19,42 +19,33 @@ getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
     $ toContent $(embedFile "static/ads.txt")
     
-
-getPage2R :: Handler Html
-getPage2R = do
-    defaultLayout $ do 
-        $(whamletFile "templates/page2.hamlet")
-        toWidgetHead$(luciusFile "templates/page2.lucius")
-        toWidgetHead$(juliusFile "templates/page2.julius")
     
 getHomeR :: Handler Html
 getHomeR = do 
-    defaultLayout $ do 
-        -- addScriptRemote "url" -> CHAMA JS EXTERNO
-        -- addScript (StaticR script_js), ONDE script 
-        -- eh o nome do seu script.
-        -- pasta css, arquivo: bootstrap.css
-        addStylesheet (StaticR css_bootstrap_css)
+    defaultLayout $ do             
+            [whamlet|
+                    <body>
+                        <h1>Hello World!!
+                        <h2>Olá mundo!!
+
+                    |]
         
-        toWidgetHead [julius|
-            function ola(){
-                alert("ola");
-            }
-        |]
-        toWidgetHead [lucius|
-            h1 {
-                color : red;
-            }
-        |]
-        [whamlet|
-            <h1>
-                OLA MUNDO!
-            
-            <ul>
-                <li>
+-- getPage1R :: Handler Html
+-- getPage1R = -- do
+--     defaultLayout -- $ do addScript (StaticR ola_js)
+--         [whamlet|
+--                     <h1>
+--                         Pag1
                     
-                        PAGINA 1
+--                     <a href={HomeR}>
+--                         Voltar
+                    
+--         |]
             
-            <button class="btn btn-danger" onclick="ola()">
-                OLA
-        |]
+            
+-- getPage2R :: Handler Html
+-- getPage2R = do
+--     defaultLayout $ do 
+--         $(whamletFile "templates/page2.hamlet")
+--         toWidgetHead$(luciusFile "templates/page2.lucius")
+--         toWidgetHead$(juliusFile "templates/page2.julius")

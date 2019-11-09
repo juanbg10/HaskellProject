@@ -52,7 +52,7 @@ getHomeR = do
             
             <ul>
                 <li>
-                    <a href=@{Page1R}>
+                    
                         PAGINA 1
             
             <button class="btn btn-danger" onclick="ola()">

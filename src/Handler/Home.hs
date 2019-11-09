@@ -62,8 +62,7 @@ getHomeR = do
                 <li>
                     <a href=@{Page3R}>
                         PAGINA 3
-            
-            <img src=@{StaticR pikachu_jpg}>
+
             
             <button class="btn btn-danger" onclick="ola()">
                 OLA

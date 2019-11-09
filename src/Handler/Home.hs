@@ -54,15 +54,6 @@ getHomeR = do
                 <li>
                     <a href=@{Page1R}>
                         PAGINA 1
-                
-                <li>
-                    <a href=@{Page2R}>
-                        PAGINA 2
-                
-                <li>
-                    <a href=@{Page3R}>
-                        PAGINA 3
-
             
             <button class="btn btn-danger" onclick="ola()">
                 OLA

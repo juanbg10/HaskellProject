@@ -19,33 +19,52 @@ getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
     $ toContent $(embedFile "static/ads.txt")
     
+
+getPage2R :: Handler Html
+getPage2R = do
+    defaultLayout $ do 
+        $(whamletFile "templates/page2.hamlet")
+        toWidgetHead$(luciusFile "templates/page2.lucius")
+        toWidgetHead$(juliusFile "templates/page2.julius")
     
 getHomeR :: Handler Html
 getHomeR = do 
-    defaultLayout $ do             
-            [whamlet|
-                    <body>
-                        <h1>Hello World!!
-                        <h2>Olá mundo!!
-
-                    |]
+    defaultLayout $ do 
+        -- addScriptRemote "url" -> CHAMA JS EXTERNO
+        -- addScript (StaticR script_js), ONDE script 
+        -- eh o nome do seu script.
+        -- pasta css, arquivo: bootstrap.css
+        addStylesheet (StaticR css_bootstrap_css)
         
--- getPage1R :: Handler Html
--- getPage1R = -- do
---     defaultLayout -- $ do addScript (StaticR ola_js)
---         [whamlet|
---                     <h1>
---                         Pag1
-                    
---                     <a href={HomeR}>
---                         Voltar
-                    
---         |]
+        toWidgetHead [julius|
+            function ola(){
+                alert("ola");
+            }
+        |]
+        toWidgetHead [lucius|
+            h1 {
+                color : red;
+            }
+        |]
+        [whamlet|
+            <h1>
+                OLA MUNDO!
             
+            <ul>
+                <li>
+                    <a href=@{Page1R}>
+                        PAGINA 1
+                
+                <li>
+                    <a href=@{Page2R}>
+                        PAGINA 2
+                
+                <li>
+                    <a href=@{Page3R}>
+                        PAGINA 3
             
--- getPage2R :: Handler Html
--- getPage2R = do
---     defaultLayout $ do 
---         $(whamletFile "templates/page2.hamlet")
---         toWidgetHead$(luciusFile "templates/page2.lucius")
---         toWidgetHead$(juliusFile "templates/page2.julius")
+            <img src=@{StaticR pikachu_jpg}>
+            
+            <button class="btn btn-danger" onclick="ola()">
+                OLA
+        |]

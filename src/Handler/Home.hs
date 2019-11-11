@@ -145,7 +145,7 @@ getHomeR = do
                             .qc-cmp-toggle-status,
                             .qc-cmp-table,
                             .qc-cmp-table-header {
-                                color: #000000 !important;
+                                color: #000 !important;
                             }
                                 
                             .qc-cmp-ui {

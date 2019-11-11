@@ -175,8 +175,7 @@ getHomeR = do
 
 
                     <body>
-                        <h1>Hello World!!
-                        <h2>Olá mundo!!
+                        <h1>Hello World The CRABS!!
 
                     |]
         

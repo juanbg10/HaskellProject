@@ -155,7 +155,7 @@ getHomeR = do
                                .qc-cmp-table,
                             .qc-cmp-table-row {
                                 border: 1px solid !important;
-                                border-color: #000000 !important;
+                                border-color: #000 !important;
                             } 
                             #qcCmpButtons a {
                                 text-decoration: none !important;

@@ -5,7 +5,7 @@ ssh root@164.132.228.201 << EOF
 cd HaskellProject &&
 git pull origin master &&
 stack build &&
-lsof -i:8080 -Fp | sed 's/^p//' | head -n -1 | xargs kill -9;
-nohup stack exec aulahaskell > /dev/null
+lsof -i:80 -Fp | sed 's/^p//' | head -n -1 | xargs kill -9;
+nohup stack exec haskellproject > /dev/null
 echo "deploy finished"
 EOF

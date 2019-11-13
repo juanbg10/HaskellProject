@@ -133,8 +133,7 @@ getHomeR = do
             <section class="showcase">
                 <div class="container-fluid p-0">
                     <div class="row no-gutters">
-                        <div class="col-lg-6 order-lg-2 text-white showcase-img">
-                            <img src="@{StaticR img_bg-showcase-1_jpg}">
+                        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('banner2.jpg');">
                         
                         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                             <h2>Totalmente Responsivo
@@ -142,16 +141,14 @@ getHomeR = do
                 
                     
                     <div class="row no-gutters">
-                        <div class="col-lg-6 text-white showcase-img">
-                            <img src="@{StaticR img_bg-showcase-2_jpg}">
+                        <div class="col-lg-6 text-white showcase-img" style="background-image: url('banner3.jpg');">
                         <div class="col-lg-6 my-auto showcase-text">
                             <h2>Fácil e Prático
                             <p class="lead mb-0">Feito pensando na usabilidade, para todas as idades!
                         
                     
                     <div class="row no-gutters">
-                        <div class="col-lg-6 order-lg-2 text-white showcase-img">
-                            <img src="@{StaticR img_bg-showcase-3_jpg}">
+                        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('banner4.jpg');">
                         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                             <h2>Testado e aprovado
                             <p class="lead mb-0">Alguns condomínios já estão usando a versão beta disponível na playStore!
@@ -166,21 +163,21 @@ getHomeR = do
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                <img class="img-fluid rounded-circle mb-3" src="@{StaticR img_testimonials-1_jpg}" >
+                                <img src=@{StaticR user1_jpg}>
                                 <h5>Juan Bertoluzzi Garcia
                                 <p class="font-weight-light mb-0">"Desenvolvedor Front"
                             
                         
                         <div class="col-lg-4">
                             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                <img class="img-fluid rounded-circle mb-3" src="@{StaticR img_testimonials-2_jpg}" alt="">
+                                <img src=@{StaticR user2_jpg}>
                                 <h5>Tais Cristina da Silva
                                 <p class="font-weight-light mb-0">"Desenvolvedora Front."
                             
                         
                         <div class="col-lg-4">
                             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                <img class="img-fluid rounded-circle mb-3" src="@{StaticR img_testimonials-3_jpg}" alt="">
+                                <img src=@{StaticR user3_jpg}>
                                 <h5>Franciele Zanella
                                 <p class="font-weight-light mb-0">"Desenvolvedora Front!"
                             

@@ -1,0 +1,6 @@
+Missing: CMD
+
+Usage: stack exec CMD [-- ARGS (e.g. stack exec -- ghc-pkg describe base)]
+                  [--[no-]ghc-package-path] [--[no-]stack-exe] [--package ARG]
+                  [--rts-options RTSFLAG] [--cwd DIR] [--help]
+  Execute a command

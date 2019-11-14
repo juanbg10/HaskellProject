@@ -58,9 +58,77 @@ getHomeR = do
             }
         |]
         toWidgetHead [lucius|
-            h1 {
-                color : red;
-            }
+                * {
+                    padding: 0;
+                    margin: 0;
+                }
+        
+                .rounded-circle{
+                    border-radius: 10vh;
+                    -webkit-box-shadow: 4px 4px 8px #999; 
+                       -moz-box-shadow: 4px 4px 8px #999;
+                           sbox-shadow: 4px 4px 8px #999;
+                }
+
+                .float-right{
+                    width: 100%;
+                    float:right;
+                    border-radius: 0.5vh;
+                    -webkit-box-shadow: 1px 1px 3px #ddd; 
+                       -moz-box-shadow: 1px 1px 3px #ddd;
+                           sbox-shadow: 1px 1px 3px #ddd;
+                    position: relative;
+                }
+
+                .float-left{
+                    width: 100%;
+                    float:left;
+                    border-radius: 0.5vh;
+                    -webkit-box-shadow: 1px 1px 3px #ddd; 
+                       -moz-box-shadow: 1px 1px 3px #ddd;
+                           sbox-shadow: 1px 1px 3px #ddd;
+                    position: relative;
+                    margin:0;
+                    padding:0;
+                }
+
+                .showcase-text{
+                    padding: 7vh;
+                }
+
+                .last{
+                    width:60% !important;
+                }
+
+                .background{
+                    width:100%;
+                    height: 100%;
+                    background-image: url('static/banner1.jpg');
+                    background-repeat: no-repeat;
+                    text-align:center;
+                    color: #fff!important;
+                    position: relative;
+                    background-color: #343a40;
+                    background-size: cover;
+                }
+
+                .mx-auto{
+                    text-align:center;
+                    margin-left:auto;
+                    margin-right:auto;
+                    position:relative;
+                    display:block;
+                    padding:10vh;
+                }
+
+                .form-row{
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    
+                }
+
         |]
         [whamlet|             
          
@@ -73,12 +141,12 @@ getHomeR = do
             <!-- Masthead -->
             <header class="masthead text-white text-center">
                 <div class="overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-9 mx-auto">
+                <div class="container background">
+                    <div class="row mx-auto">
+                        <div class="col-xl-9 ">
                             <h1 class="mb-5">Gerencie suas tarefas prediais com mais facilidade e conforto!
                         
-                        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                        <div class="mx-auto">
                             <form>
                                 <div class="form-row">
                                     <div class="col-12 col-md-9 mb-2 mb-md-0">
@@ -87,13 +155,7 @@ getHomeR = do
                                     <div class="col-12 col-md-3">
                                         <button type="submit" class="btn btn-block btn-lg btn-danger">Enviar!
                                     
-                                
-                            
-                        
-                    
-                
-            
-            
+
             <!-- Icons Grid -->
             <section class="features-icons bg-light text-center">
                 <div class="container">
@@ -133,22 +195,24 @@ getHomeR = do
             <section class="showcase">
                 <div class="container-fluid p-0">
                     <div class="row no-gutters">
-                        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('banner2.jpg');">
-                        
+                        <div class="col-lg-6 order-lg-2 text-white">
+                            <img src=@{StaticR banner2_jpg} class="rounded float-lef">                        
                         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                             <h2>Totalmente Responsivo
                             <p class="lead mb-0">Fica ótimo em qualquer dispositivo, seja um telefone, tablet ou desktop, a página se comportará de maneira responsiva!!
                 
                     
                     <div class="row no-gutters">
-                        <div class="col-lg-6 text-white showcase-img" style="background-image: url('banner3.jpg');">
                         <div class="col-lg-6 my-auto showcase-text">
                             <h2>Fácil e Prático
                             <p class="lead mb-0">Feito pensando na usabilidade, para todas as idades!
+                        <div class="col-lg-6 text-white">
+                            <img src=@{StaticR banner3_jpg} class="rounded float-right">
                         
                     
                     <div class="row no-gutters">
-                        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('banner4.jpg');">
+                        <div class="col-lg-6 order-lg-2 text-white">
+                            <img src=@{StaticR banner4_jpg} class="rounded float-lef last">
                         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                             <h2>Testado e aprovado
                             <p class="lead mb-0">Alguns condomínios já estão usando a versão beta disponível na playStore!
@@ -163,21 +227,21 @@ getHomeR = do
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                <img src=@{StaticR user1_jpg}>
+                                <img src=@{StaticR user1_jpg} class="rounded-circle">
                                 <h5>Juan Bertoluzzi Garcia
                                 <p class="font-weight-light mb-0">"Desenvolvedor Front"
                             
                         
                         <div class="col-lg-4">
                             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                <img src=@{StaticR user2_jpg}>
+                                <img src=@{StaticR user2_jpg} class="rounded-circle">
                                 <h5>Tais Cristina da Silva
                                 <p class="font-weight-light mb-0">"Desenvolvedora Front."
                             
                         
                         <div class="col-lg-4">
                             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                <img src=@{StaticR user3_jpg}>
+                                <img src=@{StaticR user3_jpg} class="rounded-circle">
                                 <h5>Franciele Zanella
                                 <p class="font-weight-light mb-0">"Desenvolvedora Front!"
                             
@@ -191,19 +255,14 @@ getHomeR = do
                         <div class="col-xl-9 mx-auto">
                             <h2 class="mb-4">Vamos começar? Envie-nos um email agora!
                         
-                        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                        <div class="">
                             <form>
                                 <div class="form-row">
                                     <div class="col-12 col-md-9 mb-2 mb-md-0">
                                         <input type="email" class="form-control form-control-lg" placeholder="Digite seu email...">
                                     
                                     <div class="col-12 col-md-3">
-                                        <button type="submit" class="btn btn-block btn-lg btn-danger">Enviar
-                                    
-                                
-                            
-                        
-                    
+                                        <button type="submit" class="btn btn-block btn-lg btn-danger">Enviar 
                 
             
             <h1>

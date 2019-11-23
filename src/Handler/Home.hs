@@ -49,9 +49,9 @@ getHomeR = do
         -- eh o nome do seu script.
         -- pasta css, arquivo: bootstrap.css
         setTitle "The Crabs"
-        addStylesheet (StaticR css_bootstrap_css)
-        addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        addScriptRemote "https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        -- addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
 
         toWidgetHead [julius|
             function ola(){

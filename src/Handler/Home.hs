@@ -81,7 +81,7 @@ getHomeR = do
                                 <div class="col-lg-4">
                                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                                         <div class="features-icons-icon d-flex">
-                                            <i class="icon-screen-desktop m-auto text-primary">
+                                            <i class="icon-screen-desktop m-auto text-primary"></i>
                                         
                                         <h3>Totalmente Responsivo
                                         <p class="lead mb-0">Feito para dispositivos móveis
@@ -90,7 +90,7 @@ getHomeR = do
                                 <div class="col-lg-4">
                                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                                         <div class="features-icons-icon d-flex">
-                                            <i class="icon-layers m-auto text-primary">
+                                            <i class="icon-layers m-auto text-primary"></i>
                                         
                                         <h3>Fácil e Prático
                                         <p class="lead mb-0">Conecte-se e resolve suas pendências sem mais problemas ou empecilhos.
@@ -100,7 +100,7 @@ getHomeR = do
                                 <div class="col-lg-4">
                                     <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                                         <div class="features-icons-icon d-flex">
-                                            <i class="icon-check m-auto text-primary">
+                                            <i class="icon-check m-auto text-primary"></i>
                                         
                                         <h3>Testado e aprovado
                                         <p class="lead mb-0">Versão beta disponível para testes!
@@ -142,7 +142,7 @@ getHomeR = do
                                 
                                 <div class="col-lg-4">
                                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                        <img class="img-fluid rounded-circle mb-3" src="static/user2.jpg" alt="">
+                                        <img class="img-fluid rounded-circle mb-3" src="static/user2.jpeg" alt="">
                                         <h5>Tais Cristina da Silva
                                         <p class="font-weight-light mb-0">"Desenvolvedora Front."
                                     

@@ -11,3 +11,12 @@ Aluno
     dtNasc Day
     deriving Show
 
+CadastroLista
+    nomeSin Text
+    emailSin Text
+    telSin  Int
+    adress  Text
+    cep     Int
+    numero  Int
+    obs     Text
+    deriving Show

@@ -68,11 +68,9 @@ getHomeR = do
                                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                                     <form>
                                         <div class="form-row">
-                                            <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                                <input type="email" class="form-control form-control-lg" placeholder="Digite o seu email...">
-                                            
                                             <div class="col-12 col-md-3">
-                                                <button type="submit" class="btn btn-block btn-lg btn-danger">Enviar!
+                                                <h4>Adicione seu condomínio...
+                                                <button type="submit" class="btn btn-block btn-lg btn-danger">Listar!
                                             
 
                     <section class="features-icons bg-light text-center">

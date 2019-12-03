@@ -4,7 +4,7 @@
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Usuario where
+module Handler.Lista where
 
 import Import
 import Text.Lucius
@@ -12,12 +12,16 @@ import Text.Julius
 import Database.Persist.Postgresql
 
 -- renderDivs
-formUsu :: Form (Usuario, Text)
+formUsu :: Form Lista
 formUsu = renderBootstrap $ (,)
-    <$> (Usuario 
+    <$> (CadastroLista 
         <$> areq textField "Nome: " Nothing
         <*> areq emailField "E-mail: " Nothing
-        <*> areq passwordField "Senha: " Nothing)
+        <*> areq telField "Telefone: " Nothing
+        <*> areq adressField "Endereço: " Nothing
+        <*> areq cepField "CEP: " Nothing
+        <*> areq numField "Número: " Nothing
+        <*> areq obsField "Observações: " Nothing)
     <*> areq passwordField "Digite Novamente: " Nothing
 
 getUsuarioR :: Handler Html
@@ -33,7 +37,7 @@ getUsuarioR = do
             <h1>
                 CADASTRAR PRÉDIO
             
-            <form method=post action=@{UsuarioR}>
+            <form method=post action=@{ListaR}>
                 ^{widget}
                 <input type="submit" value="Cadastrar">
         |]

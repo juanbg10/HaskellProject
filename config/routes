@@ -9,7 +9,7 @@
 /p3     Page3R  GET
 
 /aluno   AlunoR GET POST
-/listar  ListAlunoR GET 
+/listar  ListaR GET 
 /aluno/#AlunoId/apagar ApagarAlunoR POST
 
 /cadastrar UsuarioR GET POST

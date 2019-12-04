@@ -12,21 +12,19 @@ import Text.Julius
 import Database.Persist.Postgresql
 
 -- renderDivs
-formUsu :: Form Lista
-formUsu = renderBootstrap $ (,)
-    <$> (CadastroLista 
+formLis :: Form Lista
+formLis = renderBootstrap $  Lista
         <$> areq textField "Nome: " Nothing
-        <*> areq emailField "E-mail: " Nothing
-        <*> areq telField "Telefone: " Nothing
-        <*> areq adressField "Endereço: " Nothing
-        <*> areq cepField "CEP: " Nothing
-        <*> areq numField "Número: " Nothing
-        <*> areq obsField "Observações: " Nothing)
-    <*> areq passwordField "Digite Novamente: " Nothing
+        <*> areq textField "E-mail: " Nothing
+        <*> areq intField  "Telefone: " Nothing
+        <*> areq textField "Endereço: " Nothing
+        <*> areq intField   "CEP: " Nothing
+        <*> areq intField   "Número: " Nothing
+        <*> areq textField "Observações: " Nothing
 
-getUsuarioR :: Handler Html
-getUsuarioR = do 
-    (widget,_) <- generateFormPost formUsu
+getListaR :: Handler Html
+getListaR = do 
+    (widget,_) <- generateFormPost formLis
     msg <- getMessage
     defaultLayout $ 
         [whamlet|
@@ -42,22 +40,15 @@ getUsuarioR = do
                 <input type="submit" value="Cadastrar">
         |]
 
-postUsuarioR :: Handler Html
-postUsuarioR = do 
-    ((result,_),_) <- runFormPost formUsu
+postListaR :: Handler Html
+postListaR = do 
+    ((result,_),_) <- runFormPost formLis
     case result of 
-        FormSuccess (usuario,veri) -> do 
-            if (usuarioSenha usuario == veri) then do 
-                runDB $ insert usuario 
-                setMessage [shamlet|
-                    <div>
-                        USUARIO INCLUIDO
-                |]
-                redirect UsuarioR
-            else do 
-                setMessage [shamlet|
-                    <div>
-                        SENHA E VERIFICACAO N CONFEREM
-                |]
-                redirect UsuarioR
+        FormSuccess serie -> do 
+            runDB $ insert serie 
+            setMessage [shamlet|
+                <div>
+                    CONDOMÍNIO INCLUIDO
+            |]
+            redirect ListaR
         _ -> redirect HomeR

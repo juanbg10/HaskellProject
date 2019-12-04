@@ -11,7 +11,7 @@ Aluno
     dtNasc Day
     deriving Show
 
-CadastroLista
+Lista
     nomeSin Text
     emailSin Text
     telSin  Int

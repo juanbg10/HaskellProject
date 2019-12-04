@@ -70,7 +70,7 @@ getHomeR = do
                                         <div class="form-row">
                                             <div class="col-12 col-md-3">
                                                 <h4>Adicione seu condomínio...
-                                                <button type="submit" class="btn btn-block btn-lg btn-danger">Listar!
+                                                <button type="submit" class="btn btn-block btn-lg btn-danger" formaction=@{ListaR}> Listar!
                                             
 
                     <section class="features-icons bg-light text-center">

@@ -35,7 +35,7 @@ getEntrarR = do
             <h1>
                 ENTRAR
             
-            <form method=post action=@{EntrarR}>
+            <form method=post action=@{EntrarR} class="btn btn-danger">
                 ^{widget}
                 <input type="submit" value="Entrar">
         |]
@@ -54,7 +54,7 @@ postEntrarR = do
                 Nothing -> do 
                     setMessage [shamlet|
                         <div>
-                            Tente Novamente!
+                            <h4>Tente Novamente!
                     |]
                     redirect EntrarR
                 Just (Entity _ usu) -> do 
@@ -64,26 +64,28 @@ postEntrarR = do
                     else do 
                         setMessage [shamlet|
                             <div>
-                                Senha Incorreta!
+                                <h4>Senha Incorreta!
                         |]
                         redirect EntrarR 
         _ -> redirect HomeR
+
     
 getAdminR :: Handler Html
 getAdminR = do 
     foo <- runDB $ selectList [] [] :: Handler [Entity Lista]
     defaultLayout [whamlet|
+        <ul class="list-group">
+            $forall Entity listaId Lista {..} <- foo
+                <li class="list-group-item active">#{listaEmailSin}
+                <li class="list-group-item">#{listaNomeSin}
+                <li class="list-group-item">#{listaTelSin}
+                <li class="list-group-item">#{listaAdress}
+                <li class="list-group-item">#{listaCep}
+                <li class="list-group-item">#{listaNumero}
+                <li class="list-group-item" style="margin-bottom:4vh;">#{listaObs}
+                
+                
 
-        $forall Entity listaId Lista {..} <- foo
-            listaEmailSin
-            listaNomeSin
-            listaTelSin
-            listaAdress
-            listaCep
-            listaNumero
-            listaObs
-        
-        
-            <h1>
-            Realize seu Login!
+        <form method=post action=@{SairR}>
+            <input type="submit" value="Sair" class="btn btn-secondary">
     |]

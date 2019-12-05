@@ -29,9 +29,7 @@ getUsuarioR = do
             $maybe mensa <- msg 
                 <div>
                     ^{mensa}
-            
-            <h1>
-                CADASTRAR PRÉDIO
+
             
             <form method=post action=@{UsuarioR}>
                 ^{widget}

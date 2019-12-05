@@ -57,6 +57,7 @@ getHomeR = do
                     <div class="navbar navbar-light bg-light static-top">
                         <div class="container">
                             <a class="navbar-brand" href="#">The Crabs
+                            <button type="submit" class="btn btn-danger float-right" onclick="location.href='@{AdminR}'"> Administrador
 
                     <header class="masthead text-white text-center" style="background-image: url('static/banner1.jpg');background-repeat:no-repeat;background-attachment: center;background-position: center;">
                         <div class="overlay" >
@@ -68,7 +69,7 @@ getHomeR = do
                                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                                     <form>
                                         <div class="form-row">
-                                            <div class="col-12 col-md-3">
+                                            <div class="col-12">
                                                 <h4>Cadastre seu condomínio...
                                                 <button type="submit" class="btn btn-block btn-lg btn-danger" formaction=@{ListaR}> Cadastrar
                                             
@@ -109,65 +110,50 @@ getHomeR = do
 
                                 <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('static/banner2.jpg');">
                                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                                    <h2>Totalmente Responsivo
+                                    <h2 style="padding-left:2vh;">Totalmente Responsivo
                                     <p class="lead mb-0">Fica ótimo em qualquer dispositivo, seja um telefone, tablet ou desktop, a página se comportará de maneira responsiva!!
                                 
                             
                             <div class="row no-gutters">
                                 <div class="col-lg-6 text-white showcase-img" style="background-image: url('static/banner3.jpg');">
                                 <div class="col-lg-6 my-auto showcase-text">
-                                    <h2>Fácil e Prático
+                                    <h2 style="padding-left:2vh;">Fácil e Prático
                                     <p class="lead mb-0">Feito pensando na usabilidade, para todas as idades!
                                 
                             
                             <div class="row no-gutters">
                                 <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('static/banner4.jpg');">
                                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                                    <h2>Testado e aprovado
+                                    <h2 style="padding-left:2vh;">Testado e aprovado
                                     <p class="lead mb-0">Alguns condomínios já estão usando a versão beta disponível na playStore!
                                 
 
                     <section class="testimonials text-center bg-light">
                         <div class="container">
-                            <h2 class="mb-5">Desenvolvedores...
+                            <h2 class="mb-5">Quem Somos...
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                                         <img class="img-fluid rounded-circle mb-3" src="static/user1.jpg" alt="">
                                         <h5>Juan Bertoluzzi Garcia
-                                        <p class="font-weight-light mb-0">"Desenvolvedor Front"
+                                        <p class="font-weight-light mb-0">CEO
                                     
                                 
                                 <div class="col-lg-4">
                                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                                         <img class="img-fluid rounded-circle mb-3" src="static/user2.jpeg" alt="">
                                         <h5>Tais Cristina da Silva
-                                        <p class="font-weight-light mb-0">"Desenvolvedora Front."
+                                        <p class="font-weight-light mb-0">CTO
                                     
                                 
                                 <div class="col-lg-4">
                                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                                         <img class="img-fluid rounded-circle mb-3" src="static/user3.jpg" alt="">
                                         <h5>Franciele Zanella
-                                        <p class="font-weight-light mb-0">"Desenvolvedora Front!"
+                                        <p class="font-weight-light mb-0">CIO
 
-                    <section class="call-to-action text-white text-center" style="background-image: url('static/banner1.jpg');background-repeat:no-repeat;background-attachment: center;background-position: center;">
-                        <div class="overlay" >
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-9 mx-auto">
-                                    <h2 class="mb-4">Vamos começar? Envie-nos um email agora!
-                                
-                                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                                <input type="email" class="form-control form-control-lg" placeholder="Digite seu email...">
-                                            
-                                            <div class="col-12 col-md-3">
-                                                <button type="submit" class="btn btn-block btn-lg btn-danger">Enviar
     
-                    <footer class="footer bg-light" >
+                    <footer class="footer bg-light" style="border-top: solid 2px #000;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 h-100 text-center text-lg-left my-auto">

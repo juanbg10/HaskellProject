@@ -54,6 +54,7 @@ getHomeR = do
         addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         [whamlet|
                 <body>
+                    <script data-cfasync='false' type='text/javascript' src='//p376508.clksite.com/adServe/banners?tid=376508_738830_0'></script>
                     <div class="navbar navbar-light bg-light static-top">
                         <div class="container">
                             <a class="navbar-brand" href="#">The Crabs

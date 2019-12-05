@@ -39,9 +39,9 @@ getListaR = do
             <h1>
                 CADASTRAR PRÉDIO
             
-            <form method=post action=@{ListaR}>
+                <input type="submit" value="Cadastrar" class="btn btn-danger" style="margin-bottom:5vh;margin-left:5vh">                <form method=post action=@{ListaR} >
                 ^{widget}
-                <input type="submit" value="Cadastrar" class="btn btn-danger">
+                <input type="submit" value="Cadastrar" class="btn btn-danger" style="margin-left:5vh;">
         |]
 
 postListaR :: Handler Html

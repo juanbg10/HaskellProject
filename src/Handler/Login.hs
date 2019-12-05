@@ -58,7 +58,7 @@ postEntrarR = do
                 Nothing -> do 
                     setMessage [shamlet|
                         <div>
-                            <h4>Tente Novamente!
+                            <h4>Tente Novamente...
                     |]
                     redirect EntrarR
                 Just (Entity _ usu) -> do 

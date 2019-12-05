@@ -74,7 +74,7 @@ getHomeR = do
                                                 <h4>Cadastre seu condomínio...
                                                 <button type="submit" class="btn btn-block btn-lg btn-danger" formaction=@{ListaR}> Cadastrar
                                             
-
+                    <img class="go-to-landing" onclick="goToLanding()" src="https://www.revenuehits.com/wp-content/themes/revenuehits/assets/img/banners-img/music_red_728x90_en.jpg">
                     <section class="features-icons bg-light text-center">
                         <div class="container">
                             <div class="row">

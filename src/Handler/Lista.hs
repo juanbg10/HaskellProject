@@ -39,7 +39,7 @@ getListaR = do
             <h1>
                 CADASTRAR PRÉDIO
             
-                <input type="submit" value="Cadastrar" class="btn btn-danger" style="margin-bottom:5vh;margin-left:5vh">                <form method=post action=@{ListaR} >
+            <form method=post action=@{ListaR} style="margin-bottom:5vh;margin-left:5vh;">
                 ^{widget}
                 <input type="submit" value="Cadastrar" class="btn btn-danger" style="margin-left:5vh;">
         |]

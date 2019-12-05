@@ -29,7 +29,7 @@ getListaR = do
     defaultLayout $ 
         [whamlet|
             $maybe mensa <- msg 
-                <div>
+                <div class="container">
                     ^{mensa}
             
             <h1>
@@ -37,7 +37,7 @@ getListaR = do
             
             <form method=post action=@{ListaR}>
                 ^{widget}
-                <input type="submit" value="Cadastrar">
+                <input type="submit" value="Cadastrar" class="btn btn-danger">
         |]
 
 postListaR :: Handler Html
@@ -47,7 +47,7 @@ postListaR = do
         FormSuccess serie -> do 
             runDB $ insert serie 
             setMessage [shamlet|
-                <div>
+                <div class="container">
                     CONDOMÍNIO INCLUIDO
             |]
             redirect ListaR

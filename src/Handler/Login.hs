@@ -57,7 +57,7 @@ postEntrarR = do
            case usuario of 
                 Nothing -> do 
                     setMessage [shamlet|
-                        <div>
+                        <div class="container">
                             <h4>Tente Novamente...
                     |]
                     redirect EntrarR
@@ -67,7 +67,7 @@ postEntrarR = do
                         redirect HomeR
                     else do 
                         setMessage [shamlet|
-                            <div>
+                            <div class="container">
                                 <h4>Senha Incorreta!
                         |]
                         redirect EntrarR 

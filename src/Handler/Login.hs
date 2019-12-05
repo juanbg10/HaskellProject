@@ -26,7 +26,11 @@ getEntrarR :: Handler Html
 getEntrarR = do 
     (widget,_) <- generateFormPost formLogin
     msg <- getMessage
-    defaultLayout $ 
+    defaultLayout $ do 
+        setTitle "Administrador"
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         [whamlet|
             $maybe mensa <- msg 
                 <div>
@@ -73,7 +77,12 @@ postEntrarR = do
 getAdminR :: Handler Html
 getAdminR = do 
     foo <- runDB $ selectList [] [] :: Handler [Entity Lista]
-    defaultLayout [whamlet|
+    defaultLayout $ do 
+    setTitle "Administrador"
+    addStylesheet (StaticR css_bootstrap_css)
+    addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
+    [whamlet|
         <ul class="list-group">
             $forall Entity listaId Lista {..} <- foo
                 <li class="list-group-item active">#{listaEmailSin}

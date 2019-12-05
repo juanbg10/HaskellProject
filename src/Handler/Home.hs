@@ -153,7 +153,7 @@ getHomeR = do
                                         <p class="font-weight-light mb-0">CIO
 
     
-                    <footer class="footer bg-light" style="border-top: solid 2px #000;">
+                    <footer class="footer bg-light" style="border-top: solid 0.7px #000;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 h-100 text-center text-lg-left my-auto">

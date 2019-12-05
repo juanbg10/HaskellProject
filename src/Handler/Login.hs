@@ -1,5 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE RecordWildCards #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
@@ -11,12 +12,15 @@ import Text.Lucius
 import Text.Julius
 import Database.Persist.Postgresql
 
-
--- renderDivs
 formLogin :: Form (Text, Text)
 formLogin = renderBootstrap $ (,)
     <$> areq emailField "E-mail: " Nothing
     <*> areq passwordField "Senha: " Nothing
+
+postSairR :: Handler Html
+postSairR = do 
+    deleteSession "_NOME"
+    redirect HomeR
 
 getEntrarR :: Handler Html
 getEntrarR = do 
@@ -50,7 +54,7 @@ postEntrarR = do
                 Nothing -> do 
                     setMessage [shamlet|
                         <div>
-                            E-mail N ENCONTRADO!
+                            Tente Novamente!
                     |]
                     redirect EntrarR
                 Just (Entity _ usu) -> do 
@@ -60,19 +64,26 @@ postEntrarR = do
                     else do 
                         setMessage [shamlet|
                             <div>
-                                Senha INCORRETA!
+                                Senha Incorreta!
                         |]
                         redirect EntrarR 
         _ -> redirect HomeR
-
-postSairR :: Handler Html 
-postSairR = do 
-    deleteSession "_NOME"
-    redirect HomeR
-
+    
 getAdminR :: Handler Html
 getAdminR = do 
+    foo <- runDB $ selectList [] [] :: Handler [Entity Lista]
     defaultLayout [whamlet|
-        <h1>
-            BEM-VINDO MEU REI!
+
+        $forall Entity listaId Lista {..} <- foo
+            listaEmailSin
+            listaNomeSin
+            listaTelSin
+            listaAdress
+            listaCep
+            listaNumero
+            listaObs
+        
+        
+            <h1>
+            Realize seu Login!
     |]

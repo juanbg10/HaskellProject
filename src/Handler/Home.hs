@@ -111,24 +111,24 @@ getHomeR = do
                                 <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('static/banner2.jpg');">
                                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                                     <h2 style="padding-left:2vh;">Totalmente Responsivo
-                                    <p class="lead mb-0">Fica ótimo em qualquer dispositivo, seja um telefone, tablet ou desktop, a página se comportará de maneira responsiva!!
+                                    <p class="lead mb-0" style="padding-left:2vh;">Fica ótimo em qualquer dispositivo, seja um telefone, tablet ou desktop, a página se comportará de maneira responsiva!!
                                 
                             
                             <div class="row no-gutters">
                                 <div class="col-lg-6 text-white showcase-img" style="background-image: url('static/banner3.jpg');">
                                 <div class="col-lg-6 my-auto showcase-text">
                                     <h2 style="padding-left:2vh;">Fácil e Prático
-                                    <p class="lead mb-0">Feito pensando na usabilidade, para todas as idades!
+                                    <p class="lead mb-0" style="padding-left:2vh;">Feito pensando na usabilidade, para todas as idades!
                                 
                             
                             <div class="row no-gutters">
                                 <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('static/banner4.jpg');">
                                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                                     <h2 style="padding-left:2vh;">Testado e aprovado
-                                    <p class="lead mb-0">Alguns condomínios já estão usando a versão beta disponível na playStore!
+                                    <p class="lead mb-0" style="padding-left:2vh;">Alguns condomínios já estão usando a versão beta disponível na playStore!
                                 
 
-                    <section class="testimonials text-center bg-light">
+                    <section class="testimonials text-center bg-light" style="margin-bottom:4vh;">
                         <div class="container">
                             <h2 class="mb-5">Quem Somos...
                             <div class="row">
@@ -141,7 +141,7 @@ getHomeR = do
                                 
                                 <div class="col-lg-4">
                                     <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                                        <img class="img-fluid rounded-circle mb-3" src="static/user2.jpeg" alt="">
+                                        <img class="img-fluid rounded-circle mb-3" src="static/user2.jpg" alt="">
                                         <h5>Tais Cristina da Silva
                                         <p class="font-weight-light mb-0">CTO
                                     
@@ -153,7 +153,7 @@ getHomeR = do
                                         <p class="font-weight-light mb-0">CIO
 
     
-                    <footer class="footer bg-light" style="border-top: solid 0.7px #000;">
+                    <footer class="footer bg-light" style="margin-top:2px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 h-100 text-center text-lg-left my-auto">

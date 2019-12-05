@@ -33,15 +33,15 @@ getEntrarR = do
         addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         [whamlet|
             $maybe mensa <- msg 
-                <div>
+                <div class="mx-auto">
                     ^{mensa}
             
-            <h1>
+            <h1 class="mx-auto center">
                 ENTRAR
             
-            <form method=post action=@{EntrarR} class="btn btn-danger">
+            <form method=post action=@{EntrarR} class="container">
                 ^{widget}
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Entrar" class="btn btn-danger">
         |]
 
 postEntrarR :: Handler Html
@@ -78,23 +78,23 @@ getAdminR :: Handler Html
 getAdminR = do 
     foo <- runDB $ selectList [] [] :: Handler [Entity Lista]
     defaultLayout $ do 
-    setTitle "Administrador"
-    addStylesheet (StaticR css_bootstrap_css)
-    addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
-    [whamlet|
-        <ul class="list-group">
-            $forall Entity listaId Lista {..} <- foo
-                <li class="list-group-item active">#{listaEmailSin}
-                <li class="list-group-item">#{listaNomeSin}
-                <li class="list-group-item">#{listaTelSin}
-                <li class="list-group-item">#{listaAdress}
-                <li class="list-group-item">#{listaCep}
-                <li class="list-group-item">#{listaNumero}
-                <li class="list-group-item" style="margin-bottom:4vh;">#{listaObs}
+        setTitle "Administrador"
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
+        [whamlet|
+            <ul class="list-group">
+                $forall Entity listaId Lista {..} <- foo
+                    <li class="list-group-item active">#{listaEmailSin}
+                    <li class="list-group-item">#{listaNomeSin}
+                    <li class="list-group-item">#{listaTelSin}
+                    <li class="list-group-item">#{listaAdress}
+                    <li class="list-group-item">#{listaCep}
+                    <li class="list-group-item">#{listaNumero}
+                    <li class="list-group-item" style="margin-bottom:4vh;">#{listaObs}
                 
                 
 
-        <form method=post action=@{SairR}>
-            <input type="submit" value="Sair" class="btn btn-secondary">
-    |]
+            <form method=post action=@{SairR} style="margin-left:5vh;">
+                <input type="submit" value="Sair" class="btn btn-secondary">
+        |]

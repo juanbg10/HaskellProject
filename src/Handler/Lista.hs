@@ -26,7 +26,11 @@ getListaR :: Handler Html
 getListaR = do 
     (widget,_) <- generateFormPost formLis
     msg <- getMessage
-    defaultLayout $ 
+    defaultLayout $ do
+        setTitle "Cadastro"
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        addStylesheetRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         [whamlet|
             $maybe mensa <- msg 
                 <div class="container">

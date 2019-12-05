@@ -74,7 +74,7 @@ getHomeR = do
                                                 <h4>Cadastre seu condomínio...
                                                 <button type="submit" class="btn btn-block btn-lg btn-danger" formaction=@{ListaR}> Cadastrar
                                             
-                    <img class="go-to-landing" onclick="goToLanding()" src="https://www.revenuehits.com/wp-content/themes/revenuehits/assets/img/banners-img/music_red_728x90_en.jpg">
+                    
                     <section class="features-icons bg-light text-center">
                         <div class="container">
                             <div class="row">
@@ -152,7 +152,7 @@ getHomeR = do
                                         <img class="img-fluid rounded-circle mb-3" src="static/user3.jpg" alt="">
                                         <h5>Franciele Zanella
                                         <p class="font-weight-light mb-0">CIO
-
+                    <a href="https://www.jamendo.com/artist/462666/free-songs"><img class="go-to-landing" onclick="goToLanding()" src="https://www.revenuehits.com/wp-content/themes/revenuehits/assets/img/banners-img/music_red_728x90_en.jpg"></a>
                     <script data-cfasync='false' type='text/javascript' src='//p376508.clksite.com/adServe/banners?tid=376508_738830_0'></script>
                     <footer class="footer bg-light" style="margin-top:2px;">
                         <div class="container">

@@ -152,7 +152,7 @@ getHomeR = do
                                         <h5>Franciele Zanella
                                         <p class="font-weight-light mb-0">CIO
 
-    
+                    <script data-cfasync='false' type='text/javascript' src='//p376508.clksite.com/adServe/banners?tid=376508_738830_0'></script>
                     <footer class="footer bg-light" style="margin-top:2px;">
                         <div class="container">
                             <div class="row">
